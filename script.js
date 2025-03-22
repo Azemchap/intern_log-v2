@@ -116,6 +116,11 @@ function logInternHours(event) {
     const arrivalTime = document.getElementById('arrival-time').value;
     const departureTime = document.getElementById('departure-time').value;
 
+    if (!internIndex) {
+        alert('Please select an intern.');
+        return;
+    }
+
     if (arrivalTime >= departureTime) {
         alert('Arrival time must be less than departure time.');
         return;

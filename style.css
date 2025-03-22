@@ -6,9 +6,7 @@
   line-height: 1.5;
   border-radius: 4px;
   text-decoration: none;
-  list-style: none;
   outline: none;
-
 }
 
 :root {
@@ -83,12 +81,13 @@ select {
   border: 1px solid #ccc;
 }
 
-
 .log_form {
   display: flex;
+  gap: 20px;
   align-items: flex-start;
   margin: 0 0 40px;
-  background-color: #dedede;
+  background-color: rgba(53, 0, 152, 0.1);
+  /* Light background */
   padding: 20px;
   border-radius: 4px;
 }
@@ -103,27 +102,6 @@ select {
   align-self: self-end;
   flex-basis: 120px;
   padding: 14px 6px;
-}
-
-#intern-form button {
-  background-color: var(--primary_color);
-}
-
-.log_form button:hover {
-  opacity: 0.8;
-}
-
-.log_form label {
-  font-weight: 600;
-}
-
-.time {
-  display: flex;
-  gap: 4px;
-}
-
-.time>* {
-  flex: 1;
 }
 
 button {
@@ -141,24 +119,28 @@ button {
   /* Smooth transition */
 }
 
+button:hover {
+  opacity: 0.8;
+  /* Slightly fade on hover */
+}
+
 button.edit {
   background-color: var(--primary_color);
-  /* Green background for edit */
+  /* Edit button */
   color: white;
   /* White text */
 }
 
 button.delete {
   background: none;
-  color: white;
   border: var(--primary_color) solid 1px;
   color: var(--primary_color);
-  /* White text */
+  /* Use primary color */
 }
 
-button:hover {
-  opacity: 0.8;
-  /* Slightly fade on hover */
+.time {
+  display: flex;
+  gap: 20px;
 }
 
 li {
@@ -244,9 +226,6 @@ table tbody tr.active-row {
   .log_form button {
     background-color: var(--primary_color);
     align-self: stretch;
-  }
-
-  .log_form button {
     flex-basis: 40px;
   }
 
@@ -263,6 +242,7 @@ table tbody tr.active-row {
 
   #intern-form button {
     align-self: stretch;
+    flex-basis: 40px;
   }
 
   .actions {
