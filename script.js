@@ -200,7 +200,10 @@ function populateInternLogsTable() {
         deleteButton.textContent = 'Delete';
         deleteButton.className = 'delete'; // Add class for styling
         deleteButton.addEventListener('click', () => {
-            deleteLog(index); // Call deleteLog function with log index
+            const confirmDelete = confirm('Are you sure you want to delete this log?');
+            if (confirmDelete) {
+                deleteLog(index); // Call deleteLog function with log index
+            }
         });
 
         // Actions cell
