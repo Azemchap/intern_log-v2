@@ -11,14 +11,15 @@
 <body>
 
     <div class="container">
-        <h1>Intern Logging System</h1>
+        <a href="./index.html" class="title">Intern Logging System</a>
 
-
-
-        <h3>Log Intern Hours</h3>
+        <nav class="nav">
+            <h3 class="sub-title">Log Intern Hours</h3>
+            <a href="add_intern.html">New Intern</a>
+        </nav>
         <form id="log-form" class="log_form">
             <div>
-                <label for="intern-select">Select Intern:</label>
+                <label for="intern-select">Select Intern</label>
                 <select id="intern-select" required>
                     <option value="" disabled selected>Select an intern</option>
                 </select>
@@ -26,12 +27,12 @@
 
             <div class="time">
                 <div>
-                    <label for="arrival-time">Arrival Time:</label>
+                    <label for="arrival-time">Arrival Time</label>
                     <input type="time" id="arrival-time" required>
                 </div>
 
                 <div>
-                    <label for="departure-time">Departure Time:</label>
+                    <label for="departure-time">Departure Time</label>
                     <input type="time" id="departure-time" required>
                 </div>
             </div>
@@ -40,23 +41,7 @@
         </form>
 
         <div id="intern-logs-table" style="overflow-x: auto;"></div>
-
-
-        <h3>Create New Interns</h3>
-
-        <form id="intern-form">
-            <input type="text" id="name" placeholder="Enter Intern Name" required>
-            <button type="submit">Create Intern</button>
-        </form>
-
-
-        <h3 class="list_of_interns">List of Interns</h3>
-        <ul id="interns"></ul>
-
-
-
     </div>
-
 
     <script src="./script.js"></script>
 </body>
