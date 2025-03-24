@@ -181,6 +181,10 @@ table thead tr {
   text-align: left;
 }
 
+table thead tr th:last-of-type {
+  text-align: center;
+}
+
 table th,
 table td {
   padding: 8px 12px;
